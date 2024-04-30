@@ -8,11 +8,11 @@ return { -- override nvim-cmp plugin
 
     -- modify the sources part of the options table
     opts.sources = cmp.config.sources {
-      { name = "nvim_lsp", priority = 1000 },
-      { name = "luasnip", priority = 750 },
-      { name = "cmp_tabnine", priority = 600 },
-      { name = "buffer", priority = 500 },
-      { name = "path", priority = 250 },
+      { name = "nvim_lsp", priority = 1000, group_index = 1 },
+      { name = "luasnip", priority = 750, group_index = 2 },
+      { name = "cmp_tabnine", priority = 600, group_index = 3 },
+      { name = "buffer", priority = 500, group_index = 4 },
+      { name = "path", priority = 250, group_index = 5 },
     }
     opts.completion = {
       autocomplete = false,

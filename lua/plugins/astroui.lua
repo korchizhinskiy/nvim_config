@@ -13,8 +13,12 @@ return {
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
-        -- Normal = { bg = "#000000" },
-        -- CursorLine = { bg = "#323332" },
+        Normal = { bg = "#000000" },
+        CursorLine = { bg = "#323332" },
+        DiagnosticVirtualTextError = { bg = nil, italic = true, fg = "#f38ba8" },
+        DiagnosticVirtualTextWarn = { bg = nil, italic = true, fg = "#f9e2af" },
+        DiagnosticVirtualTextHint = { bg = nil, italic = true, fg = "#94e2d5" },
+        DiagnosticVirtualTextInfo = { bg = nil, italic = true, fg = "#89dceb" },
       },
     },
     -- Icons can be configured throughout the interface
