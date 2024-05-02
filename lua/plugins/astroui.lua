@@ -19,6 +19,8 @@ return {
         DiagnosticVirtualTextWarn = { bg = nil, italic = true, fg = "#f9e2af" },
         DiagnosticVirtualTextHint = { bg = nil, italic = true, fg = "#94e2d5" },
         DiagnosticVirtualTextInfo = { bg = nil, italic = true, fg = "#89dceb" },
+        DiagnosticUnderlineError = {},
+        DiagnosticUnderlineWarn = {},
       },
     },
     -- Icons can be configured throughout the interface
