@@ -16,6 +16,17 @@ return { -- override nvim-cmp plugin
     }
     opts.window = {
       width = 50,
+      mappings = {
+        F = "find_in_dir"
+      },
+    }
+    opts.commands = {
+        find_in_dir = function(state)
+        local node = state.tree:get_node()
+        local path = node.type == "file" and node:get_parent_id() or node:get_id()
+        require("telescope.builtin").find_files { cwd = path }
+      end
+
     }
   end,
 }
