@@ -63,6 +63,12 @@ return {
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
+        ["<Leader>fA"] = {
+          desc = "Live Grep (Args)",
+          function()
+            require("telescope").extensions.live_grep_args.live_grep_args()
+          end,
+        },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
       },
