@@ -22,7 +22,7 @@ return {
       virtual_text = true,
       underline = false,
       update_in_insert = true,
-      signs = false
+      signs = false,
     },
     -- vim options can be configured here
     options = {
