@@ -52,7 +52,15 @@ return {
         -- navigate buffer tabs with `H` and `L`
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
-
+        ["gr"] = {
+          desc = "References",
+          function()
+            require("telescope.builtin").lsp_references()
+          end,
+        },
+        ["gra"] = false,
+        ["grn"] = false,
+        ["grr"] = false,
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
           function()
