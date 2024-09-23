@@ -58,6 +58,12 @@ return {
             require("telescope.builtin").lsp_references()
           end,
         },
+        ["gd"] = {
+          desc = "Definition",
+          function()
+            require("telescope.builtin.").lsp_definitions()
+          end,
+        },
         ["gra"] = false,
         ["grn"] = false,
         ["grr"] = false,
