@@ -17,7 +17,8 @@ return { -- override nvim-cmp plugin
     opts.window = {
       width = 50,
       mappings = {
-        F = "find_in_dir"
+        F = "find_in_dir",
+        n = "close_all_subnodes"
       },
     }
     opts.commands = {

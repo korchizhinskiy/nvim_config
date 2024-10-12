@@ -1,21 +1,20 @@
 return {
-  {
-    "ggandor/flit.nvim",
-    dependencies = {
-      {
-        "ggandor/leap.nvim",
+  "folke/flash.nvim",
+  opts = {
+    labels = "abcdefghijklmnopqrstuwxyz/1234567890",
+    modes = {
+      char = {
+        jump_labels = true,
       },
     },
-    config = function()
-      require("flit").setup {
-        keys = { f = "f", F = "F", t = "t", T = "T" },
-        -- A string like "nv", "nvo", "o", etc.
-        labeled_modes = "v",
-        multiline = true,
-        -- Like `leap`s similar argument (call-specific overrides).
-        -- E.g.: opts = { equivalence_classes = {} }
-        opts = {},
-      }
-    end,
+  },
+  -- stylua: ignore
+  keys = {
+    { "s", mode = { "n", "x", "o" }, function() require("flash").jump(
+      {search = { forward = true, wrap = false, multi_window = false },
+    }) end, desc = "flash" },
+    { "S", mode = { "n", "x", "o" }, function() require("flash").jump(
+      {search = { forward = false, wrap = false, multi_window = false },
+    }) end, desc = "flash" },
   },
 }
