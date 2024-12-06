@@ -147,11 +147,28 @@ return {
           },
           -- regex that will be used to match keywords.
           -- don't replace the (KEYWORDS) placeholder
-          pattern = [[\b(KEYWORDS):]], -- ripgrep regex
+          pattern = [[#.*\b(KEYWORDS):]], -- ripgrep regex
           -- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
         },
       }
     end
   },
+  {
+  'kristijanhusak/vim-dadbod-ui',
+  dependencies = {
+    { 'tpope/vim-dadbod', lazy = true },
+    { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true }, -- Optional
+  },
+  cmd = {
+    'DBUI',
+    'DBUIToggle',
+    'DBUIAddConnection',
+    'DBUIFindBuffer',
+  },
+  init = function()
+    -- Your DBUI configuration
+    vim.g.db_ui_use_nerd_fonts = 1
+  end,
+}
 
 }

@@ -4,7 +4,7 @@ return {
     labels = "abcdefghijklmnopqrstuwxyz/1234567890",
     modes = {
       char = {
-        jump_labels = true,
+        jump_labels = false,
       },
     },
   },
